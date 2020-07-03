@@ -1,0 +1,32 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 0 -stddev-width 0 -sig-width 0 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   9
+Resultsets: 6
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       1/01/20 20:49
+
+
+Dataset                   (1) lazy.IBk | (2) lazy. (3) lazy. (4) lazy. (5) lazy. (6) lazy.
+------------------------------------------------------------------------------------------
+breast-cancer             (10)   72.43 |   73.78     73.42     73.44     73.44     75.21  
+contact-lenses            (10)   78.33 |   78.33     66.67     63.33     63.33     68.33  
+german_credit             (10)   72.00 |   73.30     74.20 v   74.00     74.30     68.90  
+pima_diabetes             (10)   70.17 |   72.65     73.18     74.74 v   72.14     72.01  
+Glass                     (10)   70.50 |   71.95     67.79     64.03 *   63.07 *   65.04  
+iris                      (10)   95.33 |   95.33     95.33     96.67     96.00     96.00  
+soybean                   (10)   91.21 |   91.35     90.17     89.16     88.57 *   82.27 *
+unbalanced                (10)   97.66 |   98.37     98.60     98.60     98.60     98.60  
+vote                      (10)   92.44 |   92.67     92.67     92.66     92.66     88.31 *
+------------------------------------------------------------------------------------------
+                               (v/ /*) |   (0/9/0)   (1/8/0)   (1/7/1)   (0/7/2)   (0/7/2)
+
+
+Key:
+(1) lazy.IBk '-K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(2) lazy.IBk '-K 3 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(3) lazy.IBk '-K 5 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(4) lazy.IBk '-K 7 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(5) lazy.IBk '-K 9 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(6) lazy.XNNAutoKClassifier '-k 1 -K 10' -8032992518269935108
+

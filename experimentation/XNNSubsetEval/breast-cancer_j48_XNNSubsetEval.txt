@@ -1,0 +1,60 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     breast-cancer-weka.filters.unsupervised.attribute.Remove-R9
+Instances:    286
+Attributes:   9
+              age
+              menopause
+              tumor-size
+              inv-nodes
+              node-caps
+              deg-malig
+              breast
+              breast-quad
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+node-caps = yes
+|   deg-malig = 1: recurrence-events (1.01/0.4)
+|   deg-malig = 2: no-recurrence-events (26.2/8.0)
+|   deg-malig = 3: recurrence-events (30.4/7.4)
+node-caps = no: no-recurrence-events (228.39/53.4)
+
+Number of Leaves  : 	4
+
+Size of the tree : 	6
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         216               75.5245 %
+Incorrectly Classified Instances        70               24.4755 %
+Kappa statistic                          0.2826
+Mean absolute error                      0.3676
+Root mean squared error                  0.4324
+Relative absolute error                 87.8635 %
+Root relative squared error             94.6093 %
+Total Number of Instances              286     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,960    0,729    0,757      0,960    0,846      0,339    0,584     0,736     no-recurrence-events
+                 0,271    0,040    0,742      0,271    0,397      0,339    0,584     0,436     recurrence-events
+Weighted Avg.    0,755    0,524    0,752      0,755    0,713      0,339    0,584     0,647     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 193   8 |   a = no-recurrence-events
+  62  23 |   b = recurrence-events
+

@@ -1,0 +1,51 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     breast-cancer
+Instances:    286
+Attributes:   10
+              age
+              menopause
+              tumor-size
+              inv-nodes
+              node-caps
+              deg-malig
+              breast
+              breast-quad
+              irradiat
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         211               73.7762 %
+Incorrectly Classified Instances        75               26.2238 %
+Kappa statistic                          0.2281
+Mean absolute error                      0.3414
+Root mean squared error                  0.4477
+Relative absolute error                 81.5847 %
+Root relative squared error             97.9585 %
+Total Number of Instances              286     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,950    0,765    0,746      0,950    0,836      0,277    0,656     0,792     no-recurrence-events
+                 0,235    0,050    0,667      0,235    0,348      0,277    0,656     0,507     recurrence-events
+Weighted Avg.    0,738    0,552    0,722      0,738    0,691      0,277    0,656     0,708     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 191  10 |   a = no-recurrence-events
+  65  20 |   b = recurrence-events
+

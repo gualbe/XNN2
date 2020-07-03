@@ -1,0 +1,40 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 0 -stddev-width 0 -sig-width 0 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   8
+Resultsets: 15
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       29/12/19 18:52
+
+
+Dataset                   (1) trees.J4 | (2) lazy. (3) lazy. (4) bayes (5) funct (6) meta. (7) meta. (8) meta. (9) meta. (10) meta (11) meta (12) meta (13) meta (14) meta (15) meta
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+breast-cancer             (10)   75.54 |   72.43     73.78     71.70     75.16     73.09     73.79     71.34 *   73.08     75.52     75.89     73.50     72.39     71.35 *   74.47  
+contact-lenses            (10)   81.67 |   78.33     78.33     71.67     75.00     81.67     75.00     78.33     71.67     75.00     68.33     40.00     58.33     53.33     53.33  
+german_credit             (10)   70.50 |   72.00     73.30     75.40 v   75.90 v   71.30     68.40     69.00     74.40 v   74.20     69.00     65.10     69.30     71.40     71.40  
+pima_diabetes             (10)   73.83 |   70.17     72.65     76.31     77.48     75.01     70.97     73.70     77.86 v   77.22     73.83     70.17     72.65     76.31     77.48  
+Glass                     (10)   66.75 |   70.50     71.95     48.59 *   64.03     69.09     76.15     73.35     48.18 *   63.12     61.56     68.64     67.71     53.29 *   61.28  
+iris                      (10)   96.00 |   95.33     95.33     96.00     94.00     96.00     96.00     94.67     96.00     95.33     72.67 *   68.00 *   76.00 *   78.00 *   79.33 *
+soybean                   (10)   91.51 |   91.21     91.35     92.96     93.41     90.19     91.35     91.50     92.38     94.87 v   28.09 *   29.41 *   31.91 *   30.87 *   35.84 *
+unbalanced                (10)   98.60 |   97.66     98.37     90.77 *   98.60     98.60     97.66 *   98.25     98.60     98.60     98.48     97.43 *   98.37     93.21 *   98.60  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                               (v/ /*) |   (0/8/0)   (0/8/0)   (1/5/2)   (1/7/0)   (0/8/0)   (0/7/1)   (0/7/1)   (2/5/1)   (1/7/0)   (0/6/2)   (0/5/3)   (0/6/2)   (0/3/5)   (0/6/2)
+
+
+Key:
+(1) trees.J48 '-C 0.25 -M 2' -217733168393644444
+(2) lazy.IBk '-K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(3) lazy.IBk '-K 3 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(4) bayes.NaiveBayes '' 5995231201785697655
+(5) functions.SimpleLogistic '-I 0 -M 500 -H 50 -W 0.0' 7397710626304705059
+(6) meta.AttributeSelectedClassifier '-E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W trees.J48 -- -C 0.25 -M 2' -1151805453487947577
+(7) meta.AttributeSelectedClassifier '-E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W lazy.IBk -- -K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -1151805453487947577
+(8) meta.AttributeSelectedClassifier '-E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W lazy.IBk -- -K 3 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -1151805453487947577
+(9) meta.AttributeSelectedClassifier '-E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W bayes.NaiveBayes' -1151805453487947577
+(10) meta.AttributeSelectedClassifier '-E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W functions.SimpleLogistic -- -I 0 -M 500 -H 50 -W 0.0' -1151805453487947577
+(11) meta.AttributeSelectedClassifier '-E \"XNNSubsetEval \" -S \"BestFirst -D 1 -N 5\" -W trees.J48 -- -C 0.25 -M 2' -1151805453487947577
+(12) meta.AttributeSelectedClassifier '-E \"XNNSubsetEval \" -S \"BestFirst -D 1 -N 5\" -W lazy.IBk -- -K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -1151805453487947577
+(13) meta.AttributeSelectedClassifier '-E \"XNNSubsetEval \" -S \"BestFirst -D 1 -N 5\" -W lazy.IBk -- -K 3 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -1151805453487947577
+(14) meta.AttributeSelectedClassifier '-E \"XNNSubsetEval \" -S \"BestFirst -D 1 -N 5\" -W bayes.NaiveBayes' -1151805453487947577
+(15) meta.AttributeSelectedClassifier '-E \"XNNSubsetEval \" -S \"BestFirst -D 1 -N 5\" -W functions.SimpleLogistic -- -I 0 -M 500 -H 50 -W 0.0' -1151805453487947577
+

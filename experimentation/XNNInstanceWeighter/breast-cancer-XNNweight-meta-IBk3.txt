@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.WeightedInstancesHandlerWrapper -S 1 -W weka.classifiers.lazy.IBk -- -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     breast-cancer-weka.filters.supervised.instance.XNNInstanceWeighter
+Instances:    286
+Attributes:   10
+              age
+              menopause
+              tumor-size
+              inv-nodes
+              node-caps
+              deg-malig
+              breast
+              breast-quad
+              irradiat
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+WeightedInstancesHandlerWrapper
+===============================
+
+Force resample with weights: false
+Base classifier:
+- command-line: weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+- handles instance weights: true
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         182.3926          80.9149 %
+Incorrectly Classified Instances        43.0204          19.0851 %
+Kappa statistic                          0.3392
+Mean absolute error                      0.2611
+Root mean squared error                  0.3816
+Relative absolute error                 72.1993 %
+Root relative squared error             89.9027 %
+Total Number of Instances              225.413 
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,963    0,691    0,819      0,963    0,885      0,384    0,748     0,883     no-recurrence-events
+                 0,309    0,037    0,722      0,309    0,432      0,384    0,748     0,578     recurrence-events
+Weighted Avg.    0,809    0,537    0,796      0,809    0,779      0,384    0,748     0,811     
+
+=== Confusion Matrix ===
+
+   a      b      <-- classified as
+ 166      6.3  |      a = no-recurrence-events
+  36.72  16.39 |      b = recurrence-events
+

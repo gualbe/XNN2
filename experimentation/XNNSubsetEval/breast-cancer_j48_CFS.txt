@@ -1,0 +1,71 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     breast-cancer-weka.filters.unsupervised.attribute.Remove-R1-2,7-8
+Instances:    286
+Attributes:   6
+              tumor-size
+              inv-nodes
+              node-caps
+              deg-malig
+              irradiat
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+inv-nodes = 0-2: no-recurrence-events (213.0/46.0)
+inv-nodes = 3-5
+|   deg-malig = 1: no-recurrence-events (3.0)
+|   deg-malig = 2: no-recurrence-events (20.0/8.0)
+|   deg-malig = 3: recurrence-events (13.0/4.0)
+inv-nodes = 6-8
+|   deg-malig = 1: recurrence-events (0.0)
+|   deg-malig = 2: no-recurrence-events (7.0/1.0)
+|   deg-malig = 3: recurrence-events (10.0/1.0)
+inv-nodes = 9-11: recurrence-events (10.0/4.0)
+inv-nodes = 12-14: recurrence-events (3.0/1.0)
+inv-nodes = 15-17: no-recurrence-events (6.0/3.0)
+inv-nodes = 18-20: no-recurrence-events (0.0)
+inv-nodes = 21-23: no-recurrence-events (0.0)
+inv-nodes = 24-26: recurrence-events (1.0)
+inv-nodes = 27-29: no-recurrence-events (0.0)
+inv-nodes = 30-32: no-recurrence-events (0.0)
+inv-nodes = 33-35: no-recurrence-events (0.0)
+inv-nodes = 36-39: no-recurrence-events (0.0)
+
+Number of Leaves  : 	17
+
+Size of the tree : 	20
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         209               73.0769 %
+Incorrectly Classified Instances        77               26.9231 %
+Kappa statistic                          0.2141
+Mean absolute error                      0.3681
+Root mean squared error                  0.4426
+Relative absolute error                 87.9775 %
+Root relative squared error             96.8395 %
+Total Number of Instances              286     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,940    0,765    0,744      0,940    0,831      0,255    0,607     0,763     no-recurrence-events
+                 0,235    0,060    0,625      0,235    0,342      0,255    0,607     0,447     recurrence-events
+Weighted Avg.    0,731    0,555    0,709      0,731    0,685      0,255    0,607     0,669     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 189  12 |   a = no-recurrence-events
+  65  20 |   b = recurrence-events
+
