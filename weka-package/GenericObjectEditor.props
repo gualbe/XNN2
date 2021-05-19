@@ -1,0 +1,5 @@
+# Enhancement models for XNN package
+weka.filters.supervised.attribute.xnn.EnhancementModel=\
+  weka.filters.supervised.attribute.xnn.ProbabilityEnhancementModel,\
+  weka.filters.supervised.attribute.xnn.GeometricEnhancementModel1,\
+  weka.filters.supervised.attribute.xnn.GeometricEnhancementModel2
