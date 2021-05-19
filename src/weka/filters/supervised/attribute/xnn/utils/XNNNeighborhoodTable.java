@@ -45,6 +45,30 @@ public class XNNNeighborhoodTable implements Iterable<XNNNeighborhood> {
 
     }
 
+    /***
+     * Build the neighboord for each instance of "instances1" using the "instances2" to take the neighbors.
+     * @param instances1
+     * @param instances2
+     */
+    public void build (Instances instances1, Instances instances2) {
+
+        Enumeration<Instance> e = instances1.enumerateInstances();
+        XNNNeighborhood row;
+        Instance inst; int i = 0;
+
+        // For each instance, build its XNNNeighborhood object and add it to the table.
+        while (e.hasMoreElements()) {
+            inst = e.nextElement();
+            row = new XNNNeighborhood(inst, i, knn);
+            row.processNeighbors(instances2);
+            //System.out.println(row);
+            table.add(row);
+            i++;
+        }
+        postProcess();
+
+    }
+
     protected void postProcess () {
 
         double x;
