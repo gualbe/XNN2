@@ -3,6 +3,8 @@ package weka.classifiers.lazy;
 import weka.classifiers.AbstractClassifier;
 import weka.core.*;
 import weka.filters.supervised.attribute.xnn.EnhancementModel;
+import weka.filters.supervised.attribute.xnn.GeometricEnhancementModel1;
+import weka.filters.supervised.attribute.xnn.GeometricEnhancementModel2;
 import weka.filters.supervised.attribute.xnn.ProbabilityEnhancementModel;
 import weka.filters.supervised.attribute.xnn.utils.XNNNeighbor;
 import weka.filters.supervised.attribute.xnn.utils.XNNNeighborhood;
